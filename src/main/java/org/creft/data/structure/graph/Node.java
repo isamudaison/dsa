@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Node<T> {
 
-    private T data;
+    private final T data;
     private List<Node<T>> relations;
     private Map<Node<T>, Boolean> relationMap;
     private NodeIdentifier nodeIdentifier;

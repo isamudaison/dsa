@@ -4,7 +4,11 @@ import java.io.Serializable;
 
 public class NodeIdentifier implements Serializable {
 
-    private String id;
+    public String getId() {
+        return id;
+    }
+
+    private final String id;
 
     public NodeIdentifier(String id) {
         this.id = id;

@@ -2,12 +2,12 @@ package org.creft.data.algorithm.sort;
 
 public class QuickSort {
 
-    public static <T extends Comparable> void sort(T[] arrayToSort){
+    public static <T extends Comparable<T>> void sort(T[] arrayToSort){
 
         quickSortHelper(arrayToSort, 0, arrayToSort.length - 1);
     }
 
-    private static <T extends Comparable> void quickSortHelper(T[] array, int low, int high){
+    private static <T extends Comparable<T>> void quickSortHelper(T[] array, int low, int high){
         if(low < high){
             int partitionIndex = partition(array, low, high);
             quickSortHelper(array, low, partitionIndex - 1);
@@ -15,7 +15,7 @@ public class QuickSort {
         }
     }
 
-    private static <T extends Comparable> int partition(T[] array, int low,int high){
+    private static <T extends Comparable<T>> int partition(T[] array, int low,int high){
         T pivot = array[high];
         int i = low - 1;
         for(int j = low; j < high; j++){
@@ -28,7 +28,7 @@ public class QuickSort {
         return i+1;
     }
 
-    private static <T extends Comparable> void swap(T[] array, int i, int j){
+    private static <T extends Comparable<T>> void swap(T[] array, int i, int j){
         T temp = array[i];
         array[i] = array[j];
         array[j] = temp;

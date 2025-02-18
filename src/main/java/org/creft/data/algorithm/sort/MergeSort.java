@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    public static <T extends Comparable> void sort(T[] arrayToSort){
+    public static <T extends Comparable<T>> void sort(T[] arrayToSort){
 
         if(arrayToSort.length < 2) return; // nothing to sort
 
@@ -18,7 +18,7 @@ public class MergeSort {
         mergeSortHelper(arrayToSort, leftAry, rightAry);
     }
 
-    private static <T extends Comparable> void mergeSortHelper(T[] totalArray, T[] leftAry, T[] rightAry){
+    private static <T extends Comparable<T>> void mergeSortHelper(T[] totalArray, T[] leftAry, T[] rightAry){
         int i = 0, j = 0, k= 0;
 
         while(i < leftAry.length && j < rightAry.length){

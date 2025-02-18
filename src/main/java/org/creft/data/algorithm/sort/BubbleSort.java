@@ -5,7 +5,7 @@ import java.util.List;
 public class BubbleSort {
 
     //In-place bubble sort of a List/Array using generics
-    public static<T extends Comparable> void sort(List<T> listToSort){
+    public static<T extends Comparable<T>> void sort(List<T> listToSort){
         int listLength = listToSort.size();
 
         for(int i = 0; i < listLength; i++){
@@ -24,7 +24,7 @@ public class BubbleSort {
     }
 
     //In-place bubble sort of a List/Array using generics
-    public static<T extends Comparable> void sort(T[] arrayToSort){
+    public static<T extends Comparable<T>> void sort(T[] arrayToSort){
 
         for(int i = 0; i < arrayToSort.length; i++){
             T currentItem = arrayToSort[i];
