@@ -16,4 +16,13 @@ public class ArrayUtility {
         System.out.print("]");
     }
 
+    //use xor operation to find a unique element in an array of 2n+1 'married' elements
+    public static int findUniqueElement(int[] array){
+        int result = 0;
+        for(int num : array){
+            result ^= num;
+        }
+        return result;
+    }
+
 }
